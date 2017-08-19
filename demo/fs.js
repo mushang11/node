@@ -15,6 +15,7 @@ var server =http.createServer(function (req,res) {
         res.end();
     })
     stream.pipe(res);
+    //最后通过 pipe() 方法把文件的数据流传递到 HTTP 请求的响应中。
 })
 server.on("error",function (error) {
     console.log("error:"+error);
